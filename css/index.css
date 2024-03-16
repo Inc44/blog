@@ -1,0 +1,33 @@
+.creator-profile-avatar {
+    border-radius: 50%;
+}
+.creator-profile-name {
+    font-weight: 700;
+    margin: 0.5em 0em;
+}
+.creator-profile {
+    max-width: 16rem;
+}
+.page-layout {
+    display: flex;
+    margin: 4em 1em;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+}
+.articles {
+    max-width: 48rem;
+    padding: 1em;
+
+}
+.layout {
+    min-height: 96vh;
+    display: flex;
+    flex-direction: column;
+}
+footer {
+    padding: 1em;
+    color: lightblue;
+    text-align: center;
+    margin: 0px auto;
+}

@@ -156,11 +156,13 @@ display: flex;
 font-size: 80%;
 font-weight: 440;
 margin: 0.2em;
+min-width: 24rem;
 padding: 1em;
 text-align: left;
 }
 #japanese_text {
 font-family: "Klee One", sans-serif;
+font-size: 80%;
 font-weight: 600;
 }
 .romaji-kiriji-content {

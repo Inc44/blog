@@ -2,18 +2,14 @@ body {
 background: rgb(255, 255, 255);
 color: rgb(58, 52, 58);
 font-size: 18px;
-text-rendering: optimizelegibility;
-}
-html,
-body {
-font-family: Shantell Sans, sans-serif;
-text-rendering: optimizelegibility;
 line-height: 1.4;
 }
 * {
+box-sizing: border-box;
+font-family: Shantell Sans, sans-serif;
 margin: 0px;
 padding: 0px;
-box-sizing: border-box;
+text-rendering: optimizelegibility;
 }
 ::selection {
 background: rgb(201, 236, 255);
@@ -136,4 +132,64 @@ margin-bottom: 1.4rem;
 .number {
 font-size: 80%;
 font-weight: 700;
+}
+button {
+background-color: rgb(150, 128, 255);
+border-radius: 4px;
+border: 1px solid transparent;
+box-sizing: border-box;
+color: inherit;
+display: flex;
+font-size: 80%;
+font-weight: 700;
+margin: 0em;
+padding: 1em;
+text-align: center;
+}
+textarea {
+background-color: rgb(216, 222, 233);
+border-radius: 4px;
+border: 1px solid transparent;
+box-sizing: border-box;
+color: inherit;
+display: flex;
+font-size: 80%;
+font-weight: 440;
+margin: 0.2em;
+padding: 1em;
+text-align: left;
+}
+#japanese_text {
+font-family: "Klee One", sans-serif;
+font-weight: 600;
+}
+.romaji-kiriji-content {
+display: flex;
+-webkit-box-pack: center;
+justify-content: center;
+margin: 1em 1em;
+}
+.textareas-container {
+display: flex;
+justify-content: center;
+}
+.button-container {
+display: flex;
+justify-content: center;
+}
+.description-container {
+display: flex;
+justify-content: center;
+}
+.title {
+font-weight: 600;
+line-height: 1.2;
+margin: 0.5em 0.2em 0.2em 0.2em;
+text-align: center;
+}
+.transcriber-description {
+font-size: 80%;
+max-width: 24rem;
+margin: 0.2em 0.2em 0.2em 0.2em;
+text-align: center;
 }

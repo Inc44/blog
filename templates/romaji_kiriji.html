@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../css/index.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Yomogi&display=swap" rel="stylesheet">
+		<script>
+			function transcribeText() {
+				var inputText = document.getElementById('japanese_text').value;
+				var request = new XMLHttpRequest();
+				request.open('POST', 'http://127.0.0.1:8000/translate/', true);
+				request.setRequestHeader('Content-Type', 'application/json');
+				request.onload = function() {
+					var resp = JSON.parse(this.response);
+					document.getElementById('romaji_text').textContent = resp.romaji_text;
+					document.getElementById('kiriji_text').textContent = resp.kiriji_text;
+				};
+				request.send(JSON.stringify({
+					japanese_text: inputText
+				}));
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<h2 class="title">Transcriber/Транскриптор</h2>
+			<div class="description-container">
+				<p class="transcriber-description">This program enables the transcription of Japanese text into Romaji and Kiriji, facilitating an understanding of pronunciation and meaning using a familiar alphabet. </p>
+				<p class="transcriber-description">Эта программа позволяет транскрибировать японский текст в Ромадзи и Киридзи, облегчая понимание произношения и значения с использованием привычного алфавита. </p>
+			</div>
+		</div>
+		<div class="romaji-kiriji-content">
+			<div class="textareas-container"></div>
+			<textarea id="japanese_text" rows="20"></textarea>
+			<textarea id="romaji_text" rows="20" readonly></textarea>
+			<textarea id="kiriji_text" rows="20" readonly></textarea>
+		</div>
+		<div class="button-container">
+			<button onclick="transcribeText()">Transcribe/Транскрибировать</button>
+		</div>
+		</div>
+	</body>
+</html>
